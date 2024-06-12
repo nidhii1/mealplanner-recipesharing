@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/recipe.css">
+  <title>Recipe Sharing Page</title>
+</head>
+<body>
+  <header>
+    <h1>Share Your Recipe</h1>
+  </header>
+  <section class="recipe-form">
+    <h2>Add a New Recipe</h2>
+    <div class="container">
+    <form id="recipe-form" enctype="multipart/form-data" action="http://127.0.0.1:3000/add_recipe" method="POST">
+      <label for="recipe_name">Recipe Name:</label>
+      <input type="text" id="recipe_name" name="recipe_name" required>
+      <label for="recipe_category">Category</label>
+      <select id="recipe_category" name="recipe_category">
+        <option value="appetizer">Appetizer</option>
+        <option value="main_course">Main Course</option>
+        <option value="dessert">Dessert</option>
+        <option value="beverage">Beverage</option>
+        <option value="soup">Soup</option>
+        <option value="paratha">MParatha</option>
+        <option value="Sabzi">Sabzi</option>
+        <option value="rice">Rice</option>
+      </select>
+      <label for="recipe_ingredients">Ingredients:</label>
+      <input id="recipe_ingredients" name="recipe_ingredients" required></textarea>
+      <label for="recipe_steps">Steps:</label>
+      <input id="recipe_steps" name="recipe_steps" required></input>
+      <br>
+      <br>
+      <!-- <label for="recipe-image">Image:</label>
+      <input type="file" id="recipe-image" name="recipe-image" accept="image/*" required> -->
+      <button type="submit">Share Recipe</button>
+    </form>
+  </div>
+  </section>
+
+  <script src="/Gharka_Swaad/js/recipe.js"></script>
+</body>
+</html>
